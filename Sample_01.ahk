@@ -15,6 +15,9 @@ main() {
 	PictureButton:=new _PictureButton() ;init class
 	GUI, +hwndhGui
 
+	if(!(pToken:=Gdip_Startup())) ;starting GDI+
+		return 1
+
 	iconset:=load_iconset("resource\buttons.png") ;loading bitmaps
 	
 	options:={y:10,state:"normal",on_click:func("ON_PRESS")} ;try state:disable
@@ -95,8 +98,6 @@ ExitApp
 
 
 load_iconset(path,bkg:=0xFFECEEEC) {
-	if(!(pToken:=Gdip_Startup()))
-		return 1
 	if(!(pBitmap:=Gdip_CreateBitmapFromFile(path)))
 		return 2
 	Width:=Gdip_GetImageWidth(pBitmap),Height:=Gdip_GetImageHeight(pBitmap)
