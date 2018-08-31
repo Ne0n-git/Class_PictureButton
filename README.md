@@ -9,18 +9,18 @@
 
 
 # Class_PictureButton_v1.ahk
-## Advantage:
+### Advantage:
 - Does not use/require third-party libraries. Written with built-in AHK functions
-## Flaw:
+### Flaw:
 - There are flickers when you change the picture(that is, when you hover/when you press / when you disable / enable the button)
 
 
 # Class_PictureButton_v2.ahk
-## Advantage:
+### Advantage:
 - Flicker-free
 - When creating - > ability to set the image as Bitmap, and the path to the image
 - When deleting - > ability to clear Bitmap, thus free up memory, or not
-## Flaw:
+### Flaw:
 - Uses GDI+ (not so scary)
 
 ------------------------------------------------------------------------------------
