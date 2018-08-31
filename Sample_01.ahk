@@ -13,6 +13,7 @@ F1::reload
 main() {
 	static main:=main() ;start this function
 	PictureButton:=new _PictureButton() ;init class
+	global hGui
 	GUI, +hwndhGui
 
 	if(!(pToken:=Gdip_Startup())) ;starting GDI+
@@ -42,6 +43,7 @@ main() {
 	OnMessage(0x202, "WM_LBUTTONUP")
 	OnMessage(0x2A3, "WM_MOUSELEAVE")
 	;<-------------------------------------->
+	OnMessage(0x112,"WM_SYSCOMMAND")
 	return 1
 }
 
@@ -176,6 +178,17 @@ WM_LBUTTONDOWN(wParam, lParam, Msg, Hwnd) {
 WM_LBUTTONUP(wParam, lParam, Msg, Hwnd) {
 	MouseGetPos,,,, hwnd, 2
 	PictureButton.LBUTTONUP(hwnd)
+}
+WM_SYSCOMMAND(wParam) {
+	global hGui
+	Gui, %hGui%:Default
+	if (wParam=0xF120) { ;SC_RESTORE
+		Gui,Show
+		PictureButton.show(-1)
+	} else if (wParam=0xF020) { ;SC_MINIMIZE
+		WinMinimize
+		return 0
+	}
 }
 
 
