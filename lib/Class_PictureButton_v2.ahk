@@ -56,7 +56,7 @@ Returns:
 
 
 
-_PictureButton.del(id,resolvebitmap=1)
+_PictureButton.del(id,removeBitmap=1)
 ________________________________________
 
 Description: deleting button.
