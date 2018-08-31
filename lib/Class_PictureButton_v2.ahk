@@ -9,7 +9,7 @@
 
 
 ;NOTES:
-	-> DoubleClick by default ignored, see 143 line in Class_PictureButton_v2.ahk
+	-> DoubleClick by default ignored, see line:290 or(find: "NOTE:DoubleClick") in Class_PictureButton_v2.ahk
 
 
 FUNCTION LIST:
@@ -287,7 +287,7 @@ class _PictureButton {
 				break
 			}
 			if (hwnd=obj.hwnd) { ;this.pressed=id and button
-				if (!this.pressed) { ;on double click
+				if (!this.pressed) { ;on DoubleClick ;NOTE:DoubleClick
 				; 	this.show(id,3)
 				; 	sleep 200
 					return
