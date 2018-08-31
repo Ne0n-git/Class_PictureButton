@@ -3,19 +3,22 @@
 ### Last updated: August 31, 2018
 ### Read this in other languages: [Russian](README.ru.md).
 
+Pages:
+Versions
+Functions
 ------------------------------------------------------------------------------------
 
 
 
-
-# Class_PictureButton_v1.ahk
+#Versions
+## Class_PictureButton_v1.ahk
 ### Advantage:
 - Does not use/require third-party libraries. Written with built-in AHK functions
 ### Flaw:
 - There are flickers when you change the picture(that is, when you hover/when you press / when you disable / enable the button)
 
 
-# Class_PictureButton_v2.ahk
+## Class_PictureButton_v2.ahk
 ### Advantage:
 - Flicker-free
 - When creating - > ability to set the image as Bitmap, and the path to the image
@@ -38,8 +41,7 @@
 -> DoubleClick by default ignored, see line:290 or(find: "NOTE:DoubleClick") in Class_PictureButton_v2.ahk
 ```
 
-
-FUNCTION LIST:
+# FUNCTION LIST
 
 
 _PictureButton.add(hwnd,options)
