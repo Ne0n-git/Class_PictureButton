@@ -1,6 +1,7 @@
 # Class_PictureButton [![_Ne0n](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ne0n-git)
 
-*Read this in other languages: [Russian](README.ru.md).
+### Last updated: August 31, 2018
+### Read this in other languages: [Russian](README.ru.md).
 
 ------------------------------------------------------------------------------------
 Class_PictureButton_v1.ahk
@@ -22,10 +23,7 @@ Flaw:
 ------------------------------------------------------------------------------------
 
 
-/*! _Ne0n
-    _PictureButton - A simple AHK implementation of Winsock.
-    https://github.com/Ne0n-git/Class_PictureButton
-    Last updated: January 19, 2011
+
 
 
 
