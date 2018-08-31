@@ -30,23 +30,16 @@ About versions
 ------------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
 # NOTES:
 ```
 -> DoubleClick by default ignored, see line:290 or(find: "NOTE:DoubleClick") in Class_PictureButton_v2.ahk
 ```
 
+------------------------------------------------------------------------------------
 # FUNCTION LIST
 
 
-_PictureButton.add(hwnd,options)
-________________________________________
+## _PictureButton.add(hwnd,options)
 
 Description: Adding new picture button.
 Args:
@@ -86,7 +79,7 @@ Returns:
 
 
 
-_PictureButton.del(id,resolvebitmap=1)
+## _PictureButton.del(id,resolvebitmap=1)
 ________________________________________
 
 Description: deleting button.
@@ -103,7 +96,7 @@ Returns:
 
 
 
-_PictureButton.show(id,state=0)
+## _PictureButton.show(id,state=0)
 ________________________________________
 
 Description: showing button/s.
@@ -125,7 +118,7 @@ NOTE: function returns all the time 1, if id=-1
 
 
 
-_PictureButton.enable(id)
+## _PictureButton.enable(id)
 ________________________________________
 
 Description: enabling button.
@@ -141,7 +134,7 @@ Returns:
 
 
 
-_PictureButton.disable(id)
+## _PictureButton.disable(id)
 ________________________________________
 
 Description: disabling button.
@@ -152,4 +145,4 @@ Returns:
     0 - button not exist
     1 - button succesfully enabled
 ----------------------------------------
-*/
+
