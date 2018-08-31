@@ -4,21 +4,24 @@
 ### Read this in other languages: [Russian](README.ru.md).
 
 ------------------------------------------------------------------------------------
-Class_PictureButton_v1.ahk
-Advantage:
+
+
+
+
+## Class_PictureButton_v1.ahk
+### Advantage:
 - Does not use/require third-party libraries. Written with built-in AHK functions
-Flaw:
+## Flaw:
 - There are flickers when you change the picture(that is, when you hover/when you press / when you disable / enable the button)
 
 
-------------------------------------------------------------------------------------
-Class_PictureButton_v2.ahk
-Advantage:
+## Class_PictureButton_v2.ahk
+### Advantage:
 - Flicker-free
 - When creating - > ability to set the image as Bitmap, and the path to the image
 - When deleting - > ability to clear Bitmap, thus free up memory, or not
-Flaw:
-- Uses Gdi (not so scary)
+### Flaw:
+- Uses GDI+ (not so scary)
 
 ------------------------------------------------------------------------------------
 
@@ -30,8 +33,10 @@ Flaw:
 
 
 
-;NOTES:
-	-> DoubleClick by default ignored, see line:290 or(find: "NOTE:DoubleClick") in Class_PictureButton_v2.ahk
+### NOTES:
+```
+-> DoubleClick by default ignored, see line:290 or(find: "NOTE:DoubleClick") in Class_PictureButton_v2.ahk
+```
 
 
 FUNCTION LIST:
