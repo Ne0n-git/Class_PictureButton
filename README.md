@@ -43,9 +43,9 @@ About versions
 
 Description: Adding new picture button.
 Args:
-    hwnd - owner window
-    options[] - options object
-        x     - position X
+	hwnd - owner window
+	options[] - options object
+	x     - position X
         y     - position Y
         w     - width
         h     - height
