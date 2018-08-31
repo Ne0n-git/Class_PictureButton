@@ -1,4 +1,5 @@
-﻿#Include lib\GDIp.ahk
+﻿return
+#Include lib\GDIp.ahk
 #Include lib\Class_PictureButton_v1.ahk
 
 
@@ -6,45 +7,55 @@
 class PictureButton { ;BUG (or not) :0 -> super-global variable
 }
 ;<------------------------------>
-return
+
+
+F1::reload
 main() {
-	static main:=main()
-	PictureButton:=new _PictureButton()
-	gui, +hwndhGui
-	gui,show,w200 h50
+	static main:=main() ;start this function
+	PictureButton:=new _PictureButton() ;init class
+
+	GUI, +hwndhGui
+	GUI,SHOW,w200 h50
 
 	btn:=["resource\button-close-normal.png"
 		   ,"resource\button-close-hover.png"
 		   ,"resource\button-close-pressed.png"
 		   ,"resource\button-close-disabled.png"]
-	options:={h:31,state:"normal",btn:btn,on_click:func("clicked")}
+	options:={h:31,state:"normal",btn:btn,on_click:func("ON_PRESS")}
 
 	PictureButton.add(hGui,options,text)
 
+
+	SetTimer, toggle_button,3000
+
+	;<--------------INIT HOOKS-------------->
 	OnMessage(0x200, "WM_MOUSEMOVE")
 	OnMessage(0x201, "WM_LBUTTONDOWN")
 	OnMessage(0x202, "WM_LBUTTONUP")
 	OnMessage(0x2A3, "WM_MOUSELEAVE")
-	SetTimer, label,3000
+	;<-------------------------------------->
 	return 1
 }
 
-GuiClose:
-ExitApp
+ON_PRESS() {
+	static i:=0
+	MsgBox,64,WARNING,BUTTON PRESSED!!
+}
 
-label:
+
+
+
+
+toggle_button:
 disabled:=!disabled
 if(disabled)
 	PictureButton.Disable(1)
 else PictureButton.Enable(1)
 return
 
-f1::reload
-clicked() {
-	static i:=0
-	i++
-	ToolTip, % i, 40, 40
-}
+
+GuiClose:
+ExitApp
 
 
 

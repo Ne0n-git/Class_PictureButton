@@ -1,4 +1,5 @@
-﻿#Include lib\GDIp.ahk
+﻿return
+#Include lib\GDIp.ahk
 #Include lib\Class_PictureButton_v2.ahk
 
 
@@ -6,53 +7,88 @@
 class PictureButton { ;BUG (or not) :0 -> super-global variable
 }
 ;<------------------------------>
-return
-main() {
-	static main:=main()
-	PictureButton:=new _PictureButton() ;NOTE -> DoubleClick by default ignored, see 143 line in Class_PictureButton_v2.ahk
-	gui, +hwndhGui
 
-	iconset:=load_iconset("resource\buttons.png")
+
+F1::reload
+main() {
+	static main:=main() ;start this function
+	PictureButton:=new _PictureButton() ;init class
+	GUI, +hwndhGui
+
+	iconset:=load_iconset("resource\buttons.png") ;loading bitmaps
 	
-	options:={y:6,state:"normal",on_click:func("clicked")}
-	x:=14
+	options:={y:10,state:"normal",on_click:func("ON_PRESS")} ;try state:disable
 	Loop % 3 {
 		i:=A_Index-1
 		if(i=2)
 			i:=3
 		btn:=[iconset[i][0],iconset[i][1],iconset[i][2],iconset[i][3]]
-		options.x:=x,options.btn:=btn
-		id:=PictureButton.add(hGui,options,text)
-		x+=11+14
+		options.btn:=btn
+		PictureButton.add(hGui,options) ;adding button with options
 	}
 
-	Gui, Show, w200 h50
+	GUI, SHOW, w200 h50
 	PictureButton.show(-1)
 
+	SetTimer, toggle_button,3000
+
+
+	;<--------------INIT HOOKS-------------->
 	OnMessage(0x200, "WM_MOUSEMOVE")
 	OnMessage(0x201, "WM_LBUTTONDOWN")
 	OnMessage(0x202, "WM_LBUTTONUP")
 	OnMessage(0x2A3, "WM_MOUSELEAVE")
-	SetTimer, label,3000
+	;<-------------------------------------->
 	return 1
 }
 
-GuiClose:
-ExitApp
+ON_PRESS(id,hwnd) {
+	static i:=0
+	MsgBox,64,WARNING,BUTTON PRESSED!!`nID:%id%`nHWND:%hwnd%
+}
 
-label:
+
+
+
+
+toggle_button:
 disabled:=!disabled
 if(disabled)
 	PictureButton.Disable(1)
 else PictureButton.Enable(1)
 return
 
-f1::reload
-clicked() {
-	static i:=0
-	i++
-	ToolTip, % i, 40, 40
-}
+
+GuiClose:
+ExitApp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
