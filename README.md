@@ -1,4 +1,4 @@
-# Class_PictureButton [![_Ne0n](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ne0n-git)
+# Class_PictureButton [![_Ne0n](https://cdn.rawgit.com/sin23dresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ne0n-git)
 
 ### Last updated: August 31, 2018
 ### Read this in other languages: [Russian](README.ru.md).
@@ -80,7 +80,7 @@ ________________________________________
 
 
 
-## _PictureButton.del(id,resolvebitmap=1)
+## _PictureButton.del(id,removeBitmap=1)
 ```
 ________________________________________
 Description: deleting button.
