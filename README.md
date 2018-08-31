@@ -41,6 +41,7 @@ About versions
 
 ## _PictureButton.add(hwnd,options)
 ```
+________________________________________
 Description: Adding new picture button.
 Args:
     hwnd - owner window
@@ -73,15 +74,15 @@ Returns:
         or value "options" is not object
         or value "btn" is not object
     N - positive number, id of created button
-----------------------------------------
+________________________________________
 ```
 
 
 
 
 ## _PictureButton.del(id,resolvebitmap=1)
-________________________________________
 ```
+________________________________________
 Description: deleting button.
 Args:
     id - id of the button
@@ -90,15 +91,15 @@ Args:
 Returns:
     0 - button not exist
     1 - button succesfully deleted
-----------------------------------------
+________________________________________
 ```
 
 
 
 
 ## _PictureButton.show(id,state=0)
-________________________________________
 ```
+________________________________________
 Description: showing button/s.
 Args:
     id - id of the button, or -1 - all button
@@ -112,7 +113,7 @@ Returns:
     0 - button not exist
     1 - button succesfully deleted
 NOTE: function returns all the time 1, if id=-1
-----------------------------------------
+________________________________________
 ```
 
 
@@ -129,7 +130,7 @@ Args:
 Returns:
     0 - button not exist
     1 - button succesfully enabled
-----------------------------------------
+________________________________________
 ```
 
 
@@ -146,5 +147,5 @@ Args:
 Returns:
     0 - button not exist
     1 - button succesfully enabled
-----------------------------------------
+________________________________________
 ```
