@@ -66,7 +66,17 @@ Args:
         * 3 - "disable"
     text[] - object
         title - text on the button.
-        color - color of text
+        color - text color
+        width - text width  *(max size)*
+        height- text height *(max size)*
+        options - options for text, separate by "|"
+			; XYWH
+			; Top|Bottom|vCentre|vCenter
+			; NoWrap
+			; R - Rendering
+			; S - Size
+			; Regular|Bold|Italic|BoldItalic|Underline|Strikeout - styles
+			; Near|Left|Centre|Center|Far|Right - Align
 ________________________________________
 REMARKS: if value of "bitmaps[N]" = color, xywh must have each parameters
 ```
