@@ -50,8 +50,8 @@ Args:
       * {x,y,w,h}
     options[] - options object
         name  - button name (uses on callback funcname(id,NAME,hwnd))
-    	  AntiAlias - AntiAlias (default:3)
-            * 0 - Default 
+    	AntiAlias - AntiAlias (default:3)
+	    * 0 - Default 
             * 1 - HighSpeed
             * 2 - HighQuality
             * 3 - None
@@ -60,7 +60,7 @@ Args:
             * "normal","hover","pressed","disable"
         on_click - function object (callback, use Func("FunctionName"))
     bitmaps[] - object (values can be a bitmap or path to file or color(ARGB)) example "color": c0xFF001122
-        * 1 - "normal"
+	* 1 - "normal"
         * 2 - "hover"
         * 3 - "pressed"
         * 3 - "disable"
@@ -70,13 +70,13 @@ Args:
         width - text width  *(max size)*
         height- text height *(max size)*
         options - options for text, separate by "|"
-			; XYWH
-			; Top|Bottom|vCentre|vCenter
-			; NoWrap
-			; R - Rendering
-			; S - Size
-			; Regular|Bold|Italic|BoldItalic|Underline|Strikeout - styles
-			; Near|Left|Centre|Center|Far|Right - Align
+	    ; XYWH
+	    ; Top|Bottom|vCentre|vCenter
+	    ; NoWrap
+	    ; R - Rendering
+	    ; S - Size
+	    ; Regular|Bold|Italic|BoldItalic|Underline|Strikeout - styles
+	    ; Near|Left|Centre|Center|Far|Right - Align
 ________________________________________
 REMARKS: if value of "bitmaps[N]" = color, xywh must have each parameters
 ```
