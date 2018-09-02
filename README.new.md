@@ -66,7 +66,7 @@ Args:
         * 3 - "disable"
     text[] - object
         title - text on the button.
-        color - text color
+        color - text color ARGB     ;;;in future("color" can be either a variable or array of colors for button states)
         width - text width  *(max size)*
         height- text height *(max size)*
         options - options for text, separate by "|"
