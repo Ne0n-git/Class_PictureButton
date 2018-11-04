@@ -1,4 +1,4 @@
-# Class_PictureButton [![_Ne0n](https://autohotkey.com/favicon.ico)](https://github.com/Ne0n-git)
+# Class_PictureButton [![_Ne0n](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ne0n-git)
 
 ### Last updated: August 31, 2018
 ### Read this in other languages: [Russian](README.ru.md).
